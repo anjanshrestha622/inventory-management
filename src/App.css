@@ -1,0 +1,13 @@
+@import '~antd/dist/antd.css';
+
+/* Dashboard header */
+.signInIcon{
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+
+}
+.signInIcon-Search{
+  width: 30%;
+}
+/* Dashboard header */
