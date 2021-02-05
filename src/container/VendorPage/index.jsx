@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Typography, message, Spin, Tabs } from 'antd'
 import axios from 'axios'
 import VendorForm from './vendorForm'
-// import VendorDisplay from './vendorDisplay'
 import VendorTableList from './VendorTableList'
 const { Title } = Typography
 
@@ -37,9 +36,6 @@ function VendorPage() {
           <TabPane tab=" Vendor List" key="2">
             {loading ? <Spin /> : <VendorTableList data={vendorData} />}
           </TabPane>
-          {/* <TabPane tab=" Vendor Display" key="3">
-            {loading ? <Spin /> : <VendorDisplay data={vendorData} />}
-          </TabPane> */}
         </Tabs>
       </div>
     </div>

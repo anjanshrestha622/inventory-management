@@ -154,11 +154,16 @@ function PurchasePage() {
   })
   const total = () => {
     return (
-      <div style={{ display: 'flex' }}>
-        <p>Total:1000</p>
-        <p>discount:200</p>
-        <p>vat:20</p>
-      </div>
+      <>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <p style={{ textAlign: 'center', width: '100%' }}>Total</p>
+          <p>10000</p>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <p style={{ textAlign: 'center', width: '100%' }}>Vat</p>
+          <p>13%</p>
+        </div>
+      </>
     )
   }
   return (

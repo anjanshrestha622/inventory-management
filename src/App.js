@@ -15,6 +15,7 @@ import SalesReturnPage from './container/SalesReturnPage'
 import Stock from './container/Stock'
 import Rack from './container/Rack'
 import SingleItem from './container/SinglePage/SingleItem'
+import SingleVendor from './container/VendorPage/SingleVendor'
 import './App.css'
 
 function App() {
@@ -32,8 +33,13 @@ function App() {
           <PrivateRoute path="/sales" exact component={SalesPage} />
           <PrivateRoute path="/stock" exact component={Stock} />
           <PrivateRoute path="/rack" exact component={Rack} />
-          <PrivateRoute path="/single-item" exact component={SingleItem} />
+          {/* <PrivateRoute path="/single-item" exact component={SingleItem} /> */}
           <PrivateRoute path="/single-item/:id" exact component={SingleItem} />
+          <PrivateRoute
+            path="/single-vendor/:id"
+            exact
+            component={SingleVendor}
+          />
           <PrivateRoute
             path="/sales-return"
             exact

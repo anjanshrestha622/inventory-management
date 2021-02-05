@@ -1,12 +1,18 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
+// import { Link } from 'react-router-dom'
+import { EditOutlined, DeleteOutlined } from '@ant-design/icons'
+import { Button, Table } from 'antd'
 import { Link } from 'react-router-dom'
-import { Table } from 'antd'
+
 const columns = [
   {
     title: 'S.N',
     dataIndex: 'id',
     key: 'id',
+    sorter: {
+      compare: (a, b) => a.id - b.id,
+    },
   },
   {
     title: 'Name',
@@ -41,8 +47,20 @@ const columns = [
   {
     title: 'Action',
     dataIndex: '',
-    key: 'x',
-    render: () => <Link to="/vendor">Edit</Link>,
+    key: 'action',
+    // eslint-disable-next-line react/display-name
+    render: (data) => (
+      <>
+        <Link to={`/single-vendor/${data.id}`}>
+          <Button style={{ width: '80px' }} icon={<EditOutlined />}>
+            Edit
+          </Button>
+        </Link>
+        <Button style={{ margin: ' 5px 5px' }} icon={<DeleteOutlined />}>
+          Delete
+        </Button>
+      </>
+    ),
   },
 ]
 function VendorTableList({ data }) {

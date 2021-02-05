@@ -90,7 +90,7 @@ function ItemPage() {
   }
 
   useEffect(() => {
-    const source = axios.CancelToken.source()
+    // const source = axios.CancelToken.source()
 
     try {
       setLoading(true)
@@ -103,10 +103,10 @@ function ItemPage() {
       setLoading(false)
       message.error(error.message)
     }
-    return () => {
-      source.cancel()
-    }
-  })
+    // return () => {
+    //   source.cancel()
+    // }
+  }, [])
 
   // const submit = (e) => {
   //   let item_name = e.target.value;
@@ -266,7 +266,6 @@ function ItemPage() {
                 </Button>
               </Col>
             </Form>
-            {/* <SubmitButton /> */}
           </TabPane>
           <TabPane tab="List Items" key="2">
             {loading ? (

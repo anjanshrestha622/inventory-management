@@ -1,5 +1,17 @@
 import React from 'react'
 import { Col, Row, Input, Form, Button } from 'antd'
+
+window.onload = function () {
+  const queryString = window.location.search
+  if (queryString.substring(3) === 'table') {
+    document.querySelector('#rc-tabs-0-tab-2').click()
+  }
+}
+
+const handleSubmit = () => {
+  // Form Code here...........
+  document.querySelector('#rc-tabs-0-tab-2').click()
+}
 function vendorForm() {
   return (
     <div>
@@ -72,6 +84,7 @@ function vendorForm() {
       <Row>
         <Col offset={4}>
           <Button
+            onClick={handleSubmit}
             size="large"
             style={{
               padding: '0px 70px',
